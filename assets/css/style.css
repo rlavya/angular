@@ -1,0 +1,17 @@
+form {
+    font-family: "Droid Sans",Helvetica,Arial,sans-serif;
+    line-height: 1.5em;
+
+}
+body {
+    background: #F8F9FA;
+    font-size: 1em;
+}
+#email, #password {
+    margin-left: 30%;
+}
+.form_class {
+    margin: 0px 34% 0px 20%;
+    border: solid cadetblue;
+    height: 300px;
+}

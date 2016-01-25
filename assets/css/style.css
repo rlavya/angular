@@ -1,17 +1,89 @@
 form {
     font-family: "Droid Sans",Helvetica,Arial,sans-serif;
     line-height: 1.5em;
+    font-size: 12px;
 
 }
 body {
     background: #F8F9FA;
     font-size: 1em;
+    min-width: 630px;
 }
 #email, #password {
     margin-left: 30%;
 }
 .form_class {
-    margin: 0px 34% 0px 20%;
+    margin: 30px 34% 0px 20%;
     border: solid cadetblue;
     height: 300px;
 }
+#show_error {
+    color: red;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid;
+}
+tr:hover {
+    background-color:#f5f5f5
+}
+#footer {
+	clear: both;
+}
+
+#header, #footer {
+	font-size:30px;
+	padding: 20px;
+	background: #BCCE98;
+    text-align: center;
+}
+#footer-wrapper {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+#container .column {
+	padding-top: 1em;
+}
+#left {
+	background: #DAE9BC;
+	width: 180px;
+	padding: 0 10px;
+	right: 240px;
+	margin-left: -100%;
+}
+
+#container {
+	padding-left: 200px;
+	padding-right: 190px;
+}
+
+#container .column {
+	position: relative;
+	float: left;
+}
+#nav {
+	float: left;
+	background: #eee;
+    margin-left: -200px;
+    height: 500px;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul a {
+	color: darkgreen;
+	text-decoration: none;
+}
+.innertube {
+				margin: 15px; /* Padding for content */
+				margin-top: 0;
+			}

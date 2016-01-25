@@ -1,0 +1,40 @@
+<script src="app/controllers/userController.js"></script>
+<script src="app/services/userService.js"></script>
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<div ng-app="UserDetails" ng-controller="userController">
+<table>
+    <thead>
+        <tr>
+            <th>
+               First Name
+            </th>
+            <th>
+               Last Name
+            </th>
+            <th>
+               Email
+            </th>
+            <th>
+               Status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat =  "emp in data">
+            <td>
+                {{ emp.firstname }}
+            </td>
+            <td>
+                {{ emp.lastname }}
+            </td>
+            <td>
+                {{ emp.email }}
+            </td>
+            <td>
+                {{ emp.status }}
+            </td>
+        </tr>
+    <tbody>
+</table>
+</div>

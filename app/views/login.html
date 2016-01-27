@@ -1,6 +1,6 @@
-<div class=" form_class">
+<div class=" form_class" ng-controller="mainController">
     <div class="row">
-            <form name="userForm" ng-submit="submitForm()" novalidate style="text-align:center">
+            <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate style="text-align:center">
                 <h3>LOGIN FORM</h3><br>
                 <span id="show_error"></span>
                 <div class="form-group" ng-class="{ '' : userForm.email.$invalid && !userForm.email.$pristine }">
@@ -12,7 +12,7 @@
                     <label>Password</label>
                     <input type="password" name="password" class="form-control" ng-model="user.password" style="width:40%" required id="password">
                 </div>
-                <a href="#home"  class="btn btn-primary" ng-disabled="userForm.$invalid" style="text-align:center">Submit</a>
+                <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid" style="text-align:center">Submit</button>
             </form>
     </div>
 </div>

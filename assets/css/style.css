@@ -2,7 +2,6 @@ form {
     font-family: "Droid Sans",Helvetica,Arial,sans-serif;
     line-height: 1.5em;
     font-size: 12px;
-
 }
 body {
     background: #F8F9FA;
@@ -84,6 +83,15 @@ nav ul a {
 	text-decoration: none;
 }
 .innertube {
-				margin: 15px; /* Padding for content */
-				margin-top: 0;
-			}
+	margin: 20px;
+    font-size: 20px;
+    padding: 5px;
+}
+#dashboard {
+    color: orange;
+    font-size: 30px;
+    padding-top: 30px;
+}
+#table_contents {
+    padding: 60px;
+}

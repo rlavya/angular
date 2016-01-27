@@ -1,7 +1,7 @@
-User.factory('UserService' ,['$http' ,'$q', function($http ,$q){
+myApp.factory('UserService' ,['$http' ,'$q', function($http ,$q){
     return{
         fetchUserDetails: function() {
-            return $http.get('../user_details.json')
+            return $http.get('app/user_details.json')
                     .then(
                             function(response){
                                 return response.data;
@@ -11,6 +11,6 @@ User.factory('UserService' ,['$http' ,'$q', function($http ,$q){
                                 return $q.reject(errResponse);
                             }
                     );
-    }
+        }
     }
 }]);

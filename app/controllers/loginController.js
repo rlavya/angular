@@ -3,8 +3,7 @@ myApp.controller('loginController', function($scope, $location){
     $scope.submitForm = function(isValid) {
         if (isValid) {
             if ($scope.user.email == "lavya@qburst.com" && $scope.user.password == "lavya") {
-                    $location.path('/home').replace();
-
+                    $location.path('/dashboard').replace();
             }
             else {
                 $('#show_error').html('Enter correct details..');
@@ -13,5 +12,4 @@ myApp.controller('loginController', function($scope, $location){
             }
         }
     };
-
 });

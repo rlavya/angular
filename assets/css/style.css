@@ -9,7 +9,7 @@ body {
 #email, #password {
     /*margin-left: 30%;*/
     /*width: 80%%;*/
-    
+
 }
 .form_class {
     margin: 30px 34% 0px 20%;
@@ -67,10 +67,10 @@ tr:hover {
 	float: left;
 }
 #nav {
-	float: left;
+	position: absolute;
 	background: #eee;
     margin-left: -200px;
-    height: 500px;
+    height: 80%;
 }
 nav ul {
 	list-style-type: none;
@@ -114,4 +114,29 @@ nav ul a {
 
 a:hover {
     text-decoration: none;
+}
+.form_outer, .edit_outer{
+  background-color: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+}
+.form_inner label, .edit_inner label {
+    width: 30%;
+    text-align: right;
+}
+.form_inner input, .edit_inner input, .edit_inner select {
+    width: 40%;
+    margin-left: 5%;
+}
+.form_inner, .edit_inner{
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  left: 10%;
+  top: 0%;
+  z-index: 999;
+  background-color: rgb(185, 198, 132);
+  text-align: center;
 }

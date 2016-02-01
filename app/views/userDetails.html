@@ -1,8 +1,42 @@
 <div side-bar></div>
+<a class="btn btn-default" ng-click="ShowAdd()" style="margin-top:10px">Add</a>
+<div ng-hide="showAddForm">
+    <div class="form_outer">
+      <div class="form_inner">
+        <h3>Add User</h3>
+          <label for="firstname">First Name</label><input type="text" id="firstname"><br>
+          <label for="lastname">Last Name</label><input type="text" id="lastname"><br>
+          <label for="email">Email</label><input type="text" id="email"><br>
+          <div style="padding:10px">
+            <button id="submit" ng-submit="addRow()">Submit</button>
+            <button id="cancel">Cancel</button>
+          </div>
+      </div>
+    </div>
+</div>
+<div ng-hide="showEditForm">
+    <div class="edit_outer">
+        <div class="edit_inner">
+            <h3>Edit User</h3>
+            <label for="first_name">First Name</label><input type="text" id="first_name"><br>
+            <label for="last_name">Last Name</label><input type="text" id="last_name"><br>
+            <label for="email_text">Email</label><input type="text" id="email_text"><br>
+            <label for="status">Status:</label><select id="status"><option>Active</option><option>Inactive</option></select><br>
+            <div style="padding:10px">
+              <button id="edit_submit">Submit</button>
+              <button id="edit_cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="table_contents">
     <table>
         <thead>
             <tr>
+                <th>
+
+                </th>
                 <th>
                    First Name
                 </th>
@@ -19,6 +53,9 @@
         </thead>
         <tbody>
             <tr ng-repeat =  "emp in data">
+                <td>
+                    <a ng-click="ShowEdit()" >Edit</a>
+                </td>
                 <td>
                     {{ emp.firstname }}
                 </td>

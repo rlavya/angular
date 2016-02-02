@@ -1,13 +1,16 @@
 <div side-bar></div>
-<a class="btn btn-default" ng-click="ShowAdd()" style="margin-top:10px">Add</a>
+<div id="add_id">
+    <a class="btn btn-default" ng-click="ShowAdd()" style="margin-top:10px">Add</a>
+</div>
 <div ng-hide="showAddForm">
     <div class="form_outer">
       <div class="form_inner">
-      <form  name="form">
+      <form  name="form" novalidate style="text-align:center">
           <h3>Add User</h3>
           <label for="firstname">First Name</label><input type="text" id="firstname" ng-model="firstname" required><br>
           <label for="lastname">Last Name</label><input type="text" id="lastname" ng-model="lastname" required><br>
-          <label for="email">Email</label><input type="email" id="email" ng-model="email" required><br>
+          <label for="email">Email</label><input type="email" id="email" ng-model="email" required>
+          <p ng-show="form.email.$invalid && !form.email.$pristine" class="help-block" style="color:red">Enter a valid email.</p><br>
           <div style="padding:10px">
             <button id="submit" ng-click="addRow()" ng-disabled="form.$invalid">Submit</button>
             <button id="cancel" ng-click="HideAdd()">Cancel</button>
@@ -34,7 +37,7 @@
 </div>
 
 <div id="table_contents">
-    <table>
+    <table style="width:100%">
         <thead>
             <tr>
                 <th>

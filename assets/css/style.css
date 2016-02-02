@@ -8,9 +8,12 @@ body {
 }
 
 .form_class {
-    margin: 30px 34% 0px 20%;
+    margin: 89px 25% 0px 25%;
     border: solid cadetblue;
     height: 300px;
+}
+#form_id {
+  padding-right: 10px;
 }
 #show_error {
     color: red;
@@ -28,60 +31,63 @@ tr:hover {
     background-color:#f5f5f5
 }
 #footer {
-	clear: both;
+  clear: both;
 }
 
 #header, #footer {
-	font-size:30px;
-	padding: 20px;
-	background: #BCCE98;
+  font-size:30px;
+  padding: 20px;
+  background: #BCCE98;
     text-align: center;
 }
 #footer-wrapper {
-	position: fixed;
-	width: 100%;
-	bottom: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 #container .column {
-	padding-top: 1em;
+  padding-top: 1em;
 }
 #left {
-	background: #DAE9BC;
-	width: 180px;
-	padding: 0 10px;
-	right: 240px;
-	margin-left: -100%;
+  background: #DAE9BC;
+  width: 180px;
+  padding: 0 10px;
+  right: 240px;
+  margin-left: -100%;
 }
 
 #container {
-	padding-left: 200px;
-	padding-right: 190px;
+  padding-left: 200px;
+  padding-right: 190px;
 }
 
 #container .column {
-	position: relative;
-	float: left;
+  position: relative;
+  float: left;
 }
 #nav {
-	position: absolute;
-	background: #eee;
+    position: absolute;
+    background: #eee;
     margin-left: -200px;
     height: 80%;
 }
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 170px;
+    background-color: #f1f1f1;
 }
-
-nav ul a {
-	color: darkgreen;
-	text-decoration: none;
-}
-.innertube {
-	margin: 20px;
+li a {
     font-size: 20px;
-    padding: 5px;
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #555;
+    color: white;
 }
 #dashboard {
     color: orange;
@@ -89,7 +95,7 @@ nav ul a {
     padding-top: 30px;
 }
 #table_contents {
-    padding: 60px;
+    padding: 60px 1% 0 20%;
 }
 #password_form, #email_form {
     float: left;
@@ -133,6 +139,12 @@ a:hover {
   left: 10%;
   top: 0%;
   z-index: 999;
-  background-color: rgb(185, 198, 132);
+  background-color: silver;
   text-align: center;
+}
+#login_id {
+  padding-top: 30px;
+}
+#add_id {
+  padding: 15px 0 0 60px;
 }

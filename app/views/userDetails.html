@@ -3,14 +3,17 @@
 <div ng-hide="showAddForm">
     <div class="form_outer">
       <div class="form_inner">
-        <h3>Add User</h3>
+      <form  name="form">
+          <h3>Add User</h3>
           <label for="firstname">First Name</label><input type="text" id="firstname" ng-model="firstname" required><br>
           <label for="lastname">Last Name</label><input type="text" id="lastname" ng-model="lastname" required><br>
-          <label for="email">Email</label><input type="text" id="email" ng-model="email" required><br>
+          <label for="email">Email</label><input type="email" id="email" ng-model="email" required><br>
           <div style="padding:10px">
-            <button id="submit" ng-click="addRow()">Submit</button>
+            <button id="submit" ng-click="addRow()" ng-disabled="form.$invalid">Submit</button>
             <button id="cancel" ng-click="HideAdd()">Cancel</button>
           </div>
+      </form>
+        
       </div>
     </div>
 </div>

@@ -8,12 +8,21 @@ body {
 }
 
 .form_class {
-    margin: 89px 25% 0px 25%;
+    margin: 9% 22% 0px 17%;
+    padding: 23px 2% 0px 0%;
     border: solid cadetblue;
     height: 300px;
 }
 #form_id {
-  padding-right: 10px;
+    padding-right: 10px;
+}
+.button_div {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+}
+.button_div button {
+  position: relative;
 }
 #show_error {
     color: red;
@@ -31,45 +40,46 @@ tr:hover {
     background-color:#f5f5f5
 }
 #footer {
-  clear: both;
+    clear: both;
 }
 
 #header, #footer {
-  font-size:30px;
-  padding: 20px;
-  background: #BCCE98;
+    font-size:30px;
+    padding: 20px;
+    background: #BCCE98;
     text-align: center;
 }
 #footer-wrapper {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
 #container .column {
-  padding-top: 1em;
+    padding-top: 1em;
 }
 #left {
-  background: #DAE9BC;
-  width: 180px;
-  padding: 0 10px;
-  right: 240px;
-  margin-left: -100%;
+    background: #DAE9BC;
+    width: 180px;
+    padding: 0 10px;
+    right: 240px;
+    margin-left: -100%;
 }
 
 #container {
-  padding-left: 200px;
-  padding-right: 190px;
+    padding-left: 200px;
+    padding-right: 190px;
+    min-height: 475px;
 }
 
 #container .column {
-  position: relative;
-  float: left;
+    position: relative;
+    float: left;
 }
 #nav {
     position: absolute;
     background: #eee;
     margin-left: -200px;
-    height: 80%;
+    height: 86%;
 }
 ul {
     list-style-type: none;
@@ -95,7 +105,7 @@ li a:hover {
     padding-top: 30px;
 }
 #table_contents {
-    padding: 60px 1% 0 20%;
+    padding: 40px 0% 0 17%;
 }
 #password_form, #email_form {
     float: left;
@@ -117,13 +127,6 @@ li a:hover {
 a:hover {
     text-decoration: none;
 }
-.form_outer, .edit_outer{
-  background-color: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-
-}
 .form_inner label, .edit_inner label {
     width: 20%;
     text-align: right;
@@ -133,18 +136,46 @@ a:hover {
     margin-left: 5%;
 }
 .form_inner, .edit_inner{
-  width: 400px;
-  height: 250px;
-  position: absolute;
-  left: 10%;
-  top: 0%;
-  z-index: 999;
-  background-color: silver;
-  text-align: center;
+    width: 400px;
+    height: 270px;
+    position: absolute;
+    left: 10%;
+    top: 0%;
+    z-index: 999;
+    background-color: ghostwhite;
+    text-align: center;
+    margin: 15% 15% 15% 25%;
 }
 #login_id {
-  padding-top: 30px;
+    padding-top: 30px;
 }
-#add_id {
-  padding: 15px 0 0 60px;
+
+#btn_add {
+    padding-top: 38px;
+    margin-left: 17%;
+    margin-right: 45%;
+}
+.shadow-div {;
+    display: none;
+    position: absolute;
+    background-color: grey;
+    opacity: 0.3;
+    width: 100%;
+    z-index: 500;
+    height: 100%;
+}
+.display_block {
+    display: block;
+}
+tr td:first-child {
+  background-image: url('../images/edit.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+tr td:first-child:hover {
+  background-image: url('../images/edit_hover.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
 }

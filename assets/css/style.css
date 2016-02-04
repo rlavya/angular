@@ -24,8 +24,10 @@ body {
 .button_div button {
   position: relative;
 }
-#show_error {
+#show_error ,#show_error_adduser,#show_error_edituser{
     color: red;
+    display: block;
+    width: 100%;
 }
 table, th, td {
     border: 1px solid black;
@@ -132,19 +134,19 @@ a:hover {
     text-align: right;
 }
 .form_inner input, .edit_inner input, .edit_inner select {
-    width: 40%;
+    width: 60%;
     margin-left: 5%;
 }
 .form_inner, .edit_inner{
     width: 400px;
-    height: 270px;
+    height: 280px;
     position: absolute;
     left: 10%;
     top: 0%;
     z-index: 999;
     background-color: ghostwhite;
     text-align: center;
-    margin: 15% 15% 15% 25%;
+    margin: 14% 15% 15% 25%;
 }
 #login_id {
     padding-top: 30px;
@@ -178,4 +180,7 @@ tr td:first-child:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
+}
+.edit_form_container {
+  padding-top: 15px;
 }

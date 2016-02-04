@@ -5,14 +5,15 @@
 <div ng-hide="showAddForm">
     <div class="form_inner">
       <form  name="form" novalidate style="text-align:center">
-      <div class="form-group" ng-class="{ '' : form.add_email.$invalid && !form.add_email.$pristine }">
+      <div class="form-group">
           <br><h3>Add User</h3>
-          <label for="firstname">First Name</label><input type="text" id="firstname" ng-model="firstname"required><br>
-          <label for="lastname">Last Name</label><input type="text" id="lastname" ng-model="lastname"required><br>
-          <label for="add_email">Email</label><input name="add_email" type="email" id="add_email" ng-model="add_email" required>
-          <p ng-show="form.add_email.$invalid && !form.add_email.$pristine" class="help-block" style="color:red">Enter a valid email</p>
+          <span id="show_error_adduser"></span><br>
+          <label for="firstname">First Name</label><input type="text" id="firstname" ng-model="firstname"><br>
+          <label for="lastname">Last Name</label><input type="text" id="lastname" ng-model="lastname"><br>
+          <label for="add_email">Email</label><input name="add_email" type="text" id="add_email" ng-model="add_email" required>
+          <p class="help-block" style="color:red"></p>
           <div style="padding-top:10px" class="button_div">
-            <button id="submit" ng-click="addRow()" ng-disabled="form.$invalid">Submit</button>
+            <button id="submit" ng-click="addRow()">Submit</button>
             <button id="cancel" ng-click="HideAdd()">Cancel</button>
           </div>
           </div>
@@ -20,27 +21,30 @@
     </div>
 </div>
 <div ng-hide="showEditForm">
-        <div class="edit_inner" style="padding-top:15px;">
+    <div class="edit_inner">
         <form  name="edit_form" novalidate style="text-align:center">
-            <div class="form-group" ng-class="{ '' : edit_form.email_text.$invalid && !edit_form.email_text.$pristine }">
-                <h3>Edit User</h3>
-                <label for="first_name">First Name</label><input type="text" id="first_name" required><br>
-                <label for="last_name">Last Name</label><input type="text" id="last_name" required><br>
-                <label for="email_text">Email</label><input type="email" id="email_text" name="email_text" required> 
-                <p ng-show="edit_form.email_text.$invalid && !edit_form.email_text.$pristine" class="help-block" style="color:red">Enter a valid email</p>
-                <label for="status">Status:</label>
-                <select id="status"><option>Active</option><option>Inactive</option></select>
-                <div style="padding:10px">
-                  <button id="edit_submit" ng-disabled="form.$invalid">Submit</button>
-                  <button id="edit_cancel" ng-click="HideEdit()">Cancel</button>
+            <div class="form-group">
+                <div class="edit_form_container">
+                    <h3>Edit User</h3>
+                    <span id="show_error_edituser"></span>
+                    <label for="first_name">First Name</label><input type="text" id="first_name" ng-model="first_name">
+                    <label for="last_name">Last Name</label><input type="text" id="last_name" ng-model="last_name">
+                    <label for="email_text">Email</label><input type="text" id="email_text" name="email_text" ng-model="email_text" required>
+                    <p class="help-block" style="color:red"></p>
+                    <label for="status">Status:</label>
+                    <select id="status" ng-model="status_select" ng-options="status for status in ['Active', 'Inactive']" ng-init="status_select='Active'"></select>
+                    <div style="padding:10px">
+                      <button id="edit_submit" ng-click="editRow()">Submit</button>
+                      <button id="edit_cancel" ng-click="HideEdit()">Cancel</button>
+                    </div>
                 </div>
             </div>
         </form>
-        </div>
+    </div>
 </div>
 
 <div id="table_contents">
-    <table style="width:100%">
+    <table style="width:100%" id="user_details">
         <thead>
             <tr>
                 <th style="width:8%">
@@ -61,7 +65,7 @@
         </thead>
         <tbody>
             <tr ng-repeat =  "emp in data">
-                <td class=\"editIcon\" ng-click="ShowEdit(e)">
+                <td class=\"editIcon\" ng-click="ShowEdit(this)">
                 </td>
                 <td>
                     {{ emp.firstname }}

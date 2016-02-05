@@ -2,7 +2,7 @@ myApp.config(function($routeProvider) {
 $routeProvider
     .when('/', {
         controller : 'loginController',
-        templateUrl: 'app/views/login.html'
+        templateUrl: 'app/views/login.html',
     })
     .when('/dashboard', {
         controller : 'dashboardController',
@@ -10,7 +10,12 @@ $routeProvider
     })
     .when('/userDetails', {
         controller : 'userController',
-        templateUrl: 'app/views/userDetails.html'
+        templateUrl: 'app/views/userDetails.html',
+        resolve : {
+            param: function(){
+                return false;
+            }
+        }
     })
     .otherwise({redirectTo: '/'})
 });

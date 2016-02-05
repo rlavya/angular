@@ -40,10 +40,6 @@ myApp.controller('userController', function($scope,UserService) {
                 tableRow.children[2].innerHTML = $scope.last_name;
                 tableRow.children[3].innerHTML = $scope.email_text;
                 tableRow.children[4].innerHTML = $scope.status_select;
-                // $scope.data[$scope.rowindex].first_name = $scope.first_name;
-                // $scope.data[$scope.rowindex].last_name = $scope.last_name;
-                // $scope.data[$scope.rowindex].email_text = $scope.email_text;
-                // $scope.data[$scope.rowindex].status_select = $scope.status_select;
                 $('.help-block').hide();
                 $scope.showEditForm = true;
                 $('.shadow-div').removeClass('display_block');

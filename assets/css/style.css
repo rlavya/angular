@@ -184,3 +184,19 @@ tr td:first-child:hover {
 .edit_form_container {
   padding-top: 15px;
 }
+.heading{
+    display: block;
+    width: 100%;
+}
+.userM{
+  padding-left: 8px;
+  width: 90%;
+  display: inline-block;
+  text-align: center;
+}
+.logout{
+    top: 0;
+    float: right;
+    position: fixed;
+    margin: 3% 0 0% 78%;
+}

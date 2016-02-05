@@ -2,22 +2,29 @@
 <html>
     <head>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
         <script src="assets/js/angular.min.js"></script>
         <script src="assets/js/angular-route.js"></script>
         <script src="assets/js/jquery.min.js"></script>
         <script src="app.js"></script>
         <script src="assets/js/routerDetails.js"></script>
         <script src="app/directives/customDirective.js"></script>
+        <script src="app/directives/logoutdirective.js"></script>
         <script src="app/controllers/userController.js"></script>
         <script src="app/services/userService.js"></script>
-        
         <script src="app/controllers/loginController.js"></script>
     </head>
     <body>
-        <div ng-app="myApp" >
+        <div ng-app="myApp">
         <div class="shadow-div"></div>
-            <header id="header"><p>User Management</p></header>
+            <header id="header">
+            <div class="heading">
+                <div class="userM">
+                    <p>User Management</p>
+                </div>        
+            </div>
+                
+            </header>
             <div id="container">
                 <div ng-view></div>
             </div>

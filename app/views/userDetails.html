@@ -1,7 +1,7 @@
 <div side-bar></div>
 <div log-out></div>
 <div id="btn_add">
-    <a class="btn btn-info" ng-click="ShowAdd()" style="margin-top:10px">Add</a>
+    <a class="btn btn-info" ng-click="ShowAdd()" >Add</a>
 </div>
 <div ng-hide="showAddForm">
     <div class="form_inner">
@@ -50,16 +50,16 @@
             <tr>
                 <th style="width:8%">
                 </th>
-                <th>
+                <th style="width:20%">
                    First Name
                 </th>
-                <th>
+                <th style="width:20%">
                    Last Name
                 </th>
-                <th>
+                <th style="width:25%">
                    Email
                 </th>
-                <th>
+                <th style="width:15%">
                    Status
                 </th>
             </tr>
@@ -78,8 +78,11 @@
                     {{ emp.email }}
                 </td>
                 <td>
-                    {{ emp.status }}
+                    {{ statusList }}
                 </td>
+                <td>
+                  <select ng-model="statusList" ng-options="status for status in ['Active', 'Inactive']" ng-init="statusList='Active'"></select>
+                </td> 
             </tr>
         <tbody>
     </table>

@@ -1,7 +1,7 @@
 myApp.controller('userController', function($scope,UserService) {
     UserService.fetchUserDetails().then(function(data) {
         $scope.data = data;
-    })
+    })  
     $scope.rowindex=0;
     $scope.addRow = function() {
         if ($scope.firstname == "" || $scope.lastname =="" || $scope.add_email =="" ) {

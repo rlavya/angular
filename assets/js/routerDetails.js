@@ -17,5 +17,9 @@ $routeProvider
             }
         }
     })
+    .when('/expense', {
+        controller : 'expenseController',
+        templateUrl: 'app/views/expense.html'
+    })
     .otherwise({redirectTo: '/'})
 });

@@ -113,7 +113,7 @@ li a:hover {
     font-size: 30px;
     padding-top: 30px;
 }
-#table_contents {
+#table_contents ,#expensetable{
     padding: 40px 0% 0 17%;
 }
 #password_form, #email_form {
@@ -176,13 +176,13 @@ a:hover {
 .display_block {
     display: block;
 }
-tr td:first-child {
+#rowIcon td:first-child {
   background-image: url('../images/edit.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
 }
-tr td:first-child:hover {
+#rowIcon td:first-child:hover {
   background-image: url('../images/edit_hover.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -206,4 +206,21 @@ tr td:first-child:hover {
     float: right;
     position: fixed;
     margin: 3% 0 0% 78%;
+}
+.wrap table {
+    width: 100%;
+    table-layout: fixed;
+}
+table tr td {
+    padding: 5px;
+    border: 1px solid #eee;
+    width: 100px;
+    word-wrap: break-word;
+}
+table.head tr td {
+    background: #eee;
+}
+.inner_table {
+    height: 200px;
+    overflow-y: auto;
 }

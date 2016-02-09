@@ -45,7 +45,7 @@
 </div>
 
 <div id="table_contents">
-    <table style="width:100%" id="user_details">
+    <table style="width:100%" id="user_details" class="scroll">
         <thead>
             <tr>
                 <th style="width:8%">
@@ -65,7 +65,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat =  "emp in data">
+            <tr ng-repeat =  "emp in data" id="rowIcon">
                 <td class=\"editIcon\" ng-click="ShowEdit(this)">
                 </td>
                 <td>
